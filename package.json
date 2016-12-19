@@ -1,6 +1,6 @@
 {
   "name": "nvd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Node Version based Dependencies ",
   "main": "index.js",
   "scripts": {

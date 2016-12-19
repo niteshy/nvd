@@ -24,7 +24,7 @@
       stdio: 'inherit' // feed all child process logging into parent process
     }
 
-    spawn('bin/npm', npmArgs, options)
+    spawn('npm', npmArgs, options)
   } else {
     log('No specific dependencies on this platform: ' + process.version)
   }
