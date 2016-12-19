@@ -12,6 +12,13 @@
   var dependencies = process.version + '-Dependencies'
   var dependenciesObj = pkg[dependencies]
 
+  var versionArray = process.version.split(".");
+  var minorDependencies = versionArray[0] + "." + versionArray[1] + ".*-Dependencies";
+  var minorDependenciesObj = pkg[minorDependencies];
+
+  dependenciesObj = dependenciesObj || minorDependenciesObj; 
+  log("dependencies = ", dependenciesObj); 
+
   if (dependenciesObj) {
     log('Installing dependencies for ' + process.version)
     var npmArgs = ['install']
