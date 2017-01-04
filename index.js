@@ -3,7 +3,7 @@
 (function() {
   var path = require('path');
   var pkg = require(path.join(process.cwd(), 'package.json'));
-  var spawn = require('spawn-sync');
+  var spawn = require('child-process').spawn;
 
   var log = console.log;
 
